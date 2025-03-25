@@ -70,7 +70,7 @@ export default function Header() {
     animate={{
       y: headerState === "hidden" ? -120 : 0,
     }}
-    transition={{ type: "tween", duration: 0.2 }}
+    transition={{ type: "tween", duration: 0.4 }}
     className={`fixed top-0 left-0  w-full z-[1000] `}
     >
       
