@@ -1,26 +1,107 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --breakpoint-8xl: 1380px;
+  --max-w-8xl: 1380px;
+  --color-accent: #7c3aed; /* Example Accent Color */
+  --color-footer: #0f0a2d;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --text-h1: clamp(2rem, 1.2083rem + 3.9583vw, 4.375rem);
+  --text-h2: clamp(1.25rem, 0.7708rem + 2.3958vw, 2.6875rem);
+  --text-subtitle: clamp(0.75rem, 0.6667rem + 0.4167vw, 1rem);
+  --text-paragraph: clamp(
+    1rem,
+    2.5vw,
+    1.25rem
+  ); /* Paragraph: Min 1rem → Optimal 2.5vw → Max 1.25rem */
+  --text-testimonial-paragraph: clamp(1rem, 0.875rem + 0.625vw, 1.375rem);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-accordion-down: accordion-down 0.4s ease-out;
+  --animate-accordion-up: accordion-up 0.4s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      max-height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+    to {
+      max-height: 0;
+      opacity: 0;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.text-subtitle {
+  font-size: var(--text-subtitle);
+  @apply font-semibold tracking-widest text-accent;
+}
+.text-h1 {
+  font-size: var(--text-h1);
+  @apply font-bold text-black leading-[1.2];
+}
+.text-h2 {
+  font-size: var(--text-h2);
+  @apply font-bold text-black leading-[1.1];
+}
+
+.text-paragraph {
+  @apply text-gray-500 text-lg;
+}
+.text-testimonial-paragraph {
+  font-size: var(--text-testimonial-paragraph);
+  @apply text-gray-500 italic;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #7c3aed !important; /* Change arrow color */
+  background: #fff !important;
+  width: 65px !important;
+  height: 65px !important;
+  border-radius: 50%;
+
+  /* Add any custom styling */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 16px !important;
+  font-weight: 700;
+}
+
+/* Position them absolutely if desired */
+.testimonial-swiper .swiper-button-next {
+  position: absolute !important;
+  top: 80%;
+  right: 0;
+
+  z-index: 10;
+}
+.testimonial-swiper .swiper-button-prev {
+  position: absolute !important;
+  top: 80%;
+  left: 70%;
+
+  z-index: 10;
+}
+
+
+/* Hide navigation on small screens (e.g., <768px) */
+@media (max-width: 500px) {
+  .testimonial-swiper .swiper-button-next,
+  .testimonial-swiper .swiper-button-prev {
+    display: none !important;
+  }
 }
