@@ -23,6 +23,7 @@ export default function HeroSection() {
 
             <div className="relative min-w-[300px]  min-h-[400px]  lg:min-h-[620px] lg:min-w-[770px] lg:translate-x-20 lg:-translate-y-20">
               <Image
+              priority
                 src="/images/slider-thumb.png"
                 className="object-contain"
                 fill
