@@ -2,14 +2,15 @@ import Image from "next/image";
 import { Container } from "../shared/Container";
 import PrimaryButton from "../shared/PrimaryButton";
 import GradientBackground from "../shared/gradient-background";
+import { FadeIn, FadeInStagger } from "../shared/FadeIn";
 
 export default function HeroSection() {
   return (
     <section className="min-h-[80vh] ">
       <GradientBackground  className="relative ">
         <Container className=" pt-32 lg:pt-46">
-          <div className="flex flex-col lg:flex-row">
-            <div className="flex flex-col gap-4 lg:min-w-1/2 ">
+          <FadeInStagger className="flex flex-col lg:flex-row">
+            <FadeIn direction="right" className="flex flex-col gap-4 lg:min-w-1/2 ">
               <p className="text-subtitle uppercase">exelenceeducation</p>
               <h1 className="text-h1">
                 Start Better Learning Future From Here
@@ -19,9 +20,9 @@ export default function HeroSection() {
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
               </p>
               <PrimaryButton href="/">Počnite danas</PrimaryButton>
-            </div>
+            </FadeIn>
 
-            <div className="relative min-w-[300px]  min-h-[400px]  lg:min-h-[620px] lg:min-w-[770px] lg:translate-x-20 lg:-translate-y-20">
+            <FadeIn direction="left" className="relative min-w-[300px]  min-h-[400px]  lg:min-h-[620px] lg:min-w-[770px] lg:translate-x-20 lg:-translate-y-20">
               <Image
               priority
                 src="/images/slider-thumb.png"
@@ -29,8 +30,8 @@ export default function HeroSection() {
                 fill
                 alt="img"
               />
-            </div>
-          </div>
+            </FadeIn>
+          </FadeInStagger>
         </Container>
       </GradientBackground>
     </section>
