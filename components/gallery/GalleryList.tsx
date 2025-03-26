@@ -73,7 +73,7 @@ export default function GalleryList({
           <h2 className="text-center font-bold text-4xl mb-8">Your images</h2>
           
           {/* Category Filter - Desktop */}
-          <div className="hidden md:flex justify-center gap-6 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
             {galleryCategories.map((category) => (
               <button
                 key={category.id}
@@ -85,20 +85,7 @@ export default function GalleryList({
             ))}
           </div>
     
-          {/* Category Filter - Mobile */}
-          <div className="md:hidden mb-8">
-            <select
-              value={selectedCategory}
-              onChange={(e) => handleCategoryChange(e.target.value)}
-              className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-            >
-              {galleryCategories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-            </select>
-          </div>
+    
     
           {/* Gallery Grid */}
           <div className="columns-1  md:columns-2 lg:columns-3 gap-4">
