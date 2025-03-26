@@ -6,7 +6,7 @@ import { FadeIn, FadeInStagger } from "../shared/FadeIn";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-[80vh] ">
+    <section className="">
       <GradientBackground  className="relative ">
         <Container className=" pt-32 lg:pt-46">
           <FadeInStagger className="flex flex-col lg:flex-row">
