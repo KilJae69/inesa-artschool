@@ -10,10 +10,10 @@ export default function Home() {
     <>
       <HeroSection />
       <AboutSection />
+      <WhyUsSection />
       <CoursesSection/>
       <TestimonialsSection />
       <GallerySection/>
-      <WhyUsSection />
     </>
   );
 }

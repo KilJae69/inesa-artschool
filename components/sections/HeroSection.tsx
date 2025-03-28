@@ -31,10 +31,10 @@ export default function HeroSection() {
             <FadeIn direction="right" className="flex flex-col gap-4 lg:min-w-1/2 ">
               <p className="text-subtitle uppercase">exelenceeducation</p>
               <h1 className="text-h1">
-                Usavršite Tehnike Crtanja i Slikanja - od Osnovnih do Naprednih Tehnika
+                 Usavršite Tehnike Crtanja i Slikanja
               </h1>
               <p className="text-paragraph">
-                Naučite 3D crtanje, sijenčenje i slikanje 
+               Od osnovnih do naprednih tehnika, naučite 3D crtanje, sijenčenje i slikanje.
               </p>
               <PrimaryButton href="/">Upišite se danas</PrimaryButton>
             </FadeIn>
