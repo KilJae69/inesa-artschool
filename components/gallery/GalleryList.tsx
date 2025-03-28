@@ -34,6 +34,8 @@ function GalleryCard({
           width={800}   // Example default width
           height={600}  // Example default height
           className="w-full h-auto object-cover rounded-lg cursor-pointer bg-gray-100 shadow-xl"
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,[your-small-base64-blur-hash]"
         />
       </motion.div>
       <div className="flex flex-wrap gap-2 mt-2">
@@ -78,7 +80,7 @@ export default function GalleryList({
               <button
                 key={category.id}
                 onClick={() => handleCategoryChange(category.id)}
-                className={`px-4 py-2 rounded-md font-medium bg-[#EDE7FE] text-accent hover:text-white hover:bg-accent duration-500 cursor-pointer transition-colors `}
+                className={`px-4 py-2 rounded-md font-medium bg-light-accent text-accent hover:text-white hover:bg-accent duration-500 cursor-pointer transition-colors `}
               >
                 {category.name}
               </button>

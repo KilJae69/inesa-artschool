@@ -5,7 +5,7 @@ import { FadeIn } from "./FadeIn";
 
 export default function PageIntro({ title }: { title: string }) {
   return (
-    <section className="relative py-4 mt-18 lg:py-11.5 lg:mt-26 bg-radial-[at_50%_95%] from-[#FFF7EB] to-[#EDE7FE]">
+    <section className="relative py-4 mt-18 lg:py-11.5 lg:mt-26 bg-radial-[at_50%_95%] from-light-gradient to-light-accent">
      
       <Container className="">
         <FadeIn className="flex flex-col justify-center items-center gap-3">

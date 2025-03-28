@@ -16,7 +16,7 @@ import { FadeIn } from "../shared/FadeIn";
 export default function TestimonialsSection() {
  
   return (
-    <section className="py-30 bg-radial-[at_50%_95%] from-[#FFF7EB] to-[#EDE7FE] min-h-[500px]">
+    <section className="py-30 bg-radial-[at_50%_95%] from-light-gradient to-light-accent min-h-[500px]">
       <Container>
         <div className="flex gap-7 flex-col lg:flex-row lg:items-center lg:justify-between">
           <FadeIn direction="right">

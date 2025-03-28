@@ -6,7 +6,7 @@ import { FadeIn, FadeInStagger } from "../shared/FadeIn";
 
 export default function AboutSection() {
   return (
-    <section className="py-30 lg:py-12">
+    <section className="py-30 ">
       <Container>
         <div className="flex relative w-full justify-between flex-col lg:flex-row gap-8">
           <Image

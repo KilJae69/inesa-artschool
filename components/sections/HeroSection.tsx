@@ -6,9 +6,9 @@ import { FadeIn, FadeInStagger } from "../shared/FadeIn";
 
 export default function HeroSection() {
   return (
-    <section className="relative">
+    <section className="relative bg-gray-100">
        <div
-        className="absolute w-[500px] h-[500px] md:w-[800px] md:h-[800px] rounded-full opacity-30 md:opacity-40 blur-3xl 
+        className="absolute w-[500px] h-[500px]  md:w-[800px] md:h-[800px] rounded-full opacity-30 md:opacity-40 blur-3xl 
                   md:left-[-200px] md:top-1/4 
                   left-1/2 top-[-100px] transform md:translate-y-0 -translate-x-1/2"
         style={{
@@ -31,13 +31,12 @@ export default function HeroSection() {
             <FadeIn direction="right" className="flex flex-col gap-4 lg:min-w-1/2 ">
               <p className="text-subtitle uppercase">exelenceeducation</p>
               <h1 className="text-h1">
-                Start Better Learning Future From Here
+                Usavršite Tehnike Crtanja i Slikanja - od Osnovnih do Naprednih Tehnika
               </h1>
               <p className="text-paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
+                Naučite 3D crtanje, sijenčenje i slikanje 
               </p>
-              <PrimaryButton href="/">Počnite danas</PrimaryButton>
+              <PrimaryButton href="/">Upišite se danas</PrimaryButton>
             </FadeIn>
 
             <FadeIn direction="left" className="relative min-w-[300px]  min-h-[400px]  lg:min-h-[620px] lg:min-w-[770px] lg:translate-x-20 lg:-translate-y-20">

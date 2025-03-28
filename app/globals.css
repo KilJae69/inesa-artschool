@@ -6,6 +6,8 @@
   --max-w-8xl: 1380px;
   --color-accent: #7c3aed; /* Example Accent Color */
   --color-footer: #0f0a2d;
+  --color-light-accent: #EDE7FE;
+  --color-light-gradient: #FFF7EB;
 
   --text-h1: clamp(2rem, 1.2083rem + 3.9583vw, 4.375rem);
   --text-h2: clamp(1.25rem, 0.7708rem + 2.3958vw, 2.6875rem);
@@ -104,4 +106,16 @@
   .testimonial-swiper .swiper-button-prev {
     display: none !important;
   }
+}
+
+.outlined-text {
+  font-size: 60px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  transition: -webkit-text-stroke 0.3s ease;
+}
+
+.card:hover .outlined-text {
+  -webkit-text-stroke: 1px white;
 }
